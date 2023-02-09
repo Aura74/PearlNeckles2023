@@ -52,6 +52,28 @@ namespace PearlNeckles2023
             return c;
         }
 
+
+        //public bool HasPearlSize (int size) => _stringOfPearls.Any(p => p.Size == size);
+        public bool HasPearlSize(int size) 
+        { 
+            return _stringOfPearls.Find(p => p.Size == size) != null;
+        }
+
+        // vet inte om denna stämmer
+        //public bool HasPearlSizeAll(int size)
+        //{
+        //    return _stringOfPearls.FindAll(p => p.Size == size) != null;
+        //}
+
+        //public List<IPearl> FindAllOfSize(int size) => _stringOfPearls.FindAll(p => p.Size == size);
+
+        //public Necklace FindAllOfSizeLong(int size) 
+        //{
+        //    var n = new Necklace();
+        //    n._stringOfPearls = this._stringOfPearls.FindAll(p => p.Size == size);
+        //    return n;
+        //}
+
         //public int IndexOf(IPearl pearl) => _stringOfPearls.IndexOf(pearl);
 
         public override string ToString()
@@ -68,10 +90,10 @@ namespace PearlNeckles2023
         public void Sort() => _stringOfPearls.Sort();
         public int IndexOf(IPearl pearl) => _stringOfPearls.IndexOf(pearl);
 
-        public bool HasPearlSize(int size)
-        {
-            return _stringOfPearls.Find(x => x.Size == size) != null;
-        }
+        //public bool HasPearlSize(int size)
+        //{
+        //    return _stringOfPearls.Find(x => x.Size == size) != null;
+        //}
         public Necklace FindAllOfSize(int size)
         {
             var n = new Necklace();
