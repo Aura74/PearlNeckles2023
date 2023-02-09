@@ -9,7 +9,7 @@ namespace PearlNeckles2023
     public enum PearlColor { Black, White, Pink }
     public enum PearlShape { Round, DropShaped }
     public enum PearlType { FreshWater, SaltWater }
-    public interface IPearl
+    public interface IPearl : IEquatable<IPearl>, IComparable<IPearl>
     {
         public int Size { get; set; }
         public PearlColor Color { get; set; }
